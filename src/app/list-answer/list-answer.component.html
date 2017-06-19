@@ -1,0 +1,7 @@
+<app-answer-form *ngFor="let answer of listAnswer" [answer]="answer" [cAnswer]="currentAnswer" (remove)="removeAnswer($event)" (click)="chooseAnswer(answer)"></app-answer-form>
+<div class="add-option" (click)="addOption()">
+  <md-icon class="icon left">panorama_fish_eye</md-icon>
+  <md-input-container [floatPlaceholder]="'never'">
+    <input mdInput disabled value="Add option">
+  </md-input-container>
+</div>

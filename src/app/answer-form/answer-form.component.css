@@ -1,0 +1,50 @@
+:host {
+    position: relative;
+    display: block;
+}
+
+:host .input-middle {
+    display: block;
+    position: relative;
+    padding: 0px 84px 0px 32px;
+}
+
+:host md-icon {
+    font-size: 20px;
+    position: absolute;
+    bottom: 3px;
+    cursor: pointer;
+}
+
+:host md-icon.hide {
+    opacity: 0;
+}
+
+.answer-wrap >>> md-input-container .mat-input-underline {
+    opacity: 0;
+}
+
+.answer-wrap:hover md-input-container >>> .mat-input-underline, .answer-wrap:hover md-icon.hide{
+    opacity: 1;
+}
+
+.answer-wrap.active md-input-container >>> .mat-input-underline, .answer-wrap.active md-icon.hide {
+    opacity: 1;
+}
+
+.icon.left {
+    left: 0px;
+}
+
+.icon.right {
+    right: 0px;
+}
+
+.icon.out-left {
+    left: -20px;
+}
+
+.icon.in-right {
+    right: 40px;
+}
+

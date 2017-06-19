@@ -1,0 +1,17 @@
+:host .add-option {
+    display: block;
+    position: relative;
+    padding: 0px 0px 0px 32px;
+    width: 80px;
+}
+
+:host md-icon {
+    font-size: 20px;
+    position: absolute;
+    bottom: 3px;
+    cursor: pointer;
+}
+
+.icon.left {
+    left: 0px;
+}

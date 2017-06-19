@@ -34,8 +34,8 @@
     opacity: 1;
 }
 
-.gu-mirror md-input-container .mat-input-underline,
-.gu-mirror md-icon.hide {
+:host.gu-mirror md-input-container .mat-input-underline,
+:host.gu-mirror md-icon.hide {
     opacity: 1;
 }
 
@@ -49,6 +49,7 @@
 
 .icon.out-left {
     left: -20px;
+    cursor: move;
 }
 
 .icon.in-right {

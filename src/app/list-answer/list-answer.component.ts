@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DragulaService } from 'ng2-dragula/ng2-dragula';
 
 @Component({
@@ -7,6 +7,7 @@ import { DragulaService } from 'ng2-dragula/ng2-dragula';
   styleUrls: ['./list-answer.component.css']
 })
 export class ListAnswerComponent implements OnInit {
+  @Input() idQues: any;
   options: any = {
     removeOnSpill: false
   };
@@ -31,23 +32,6 @@ export class ListAnswerComponent implements OnInit {
   currentAnswer: Number;
 
   constructor(private dragulaService: DragulaService) {
-    dragulaService.setOptions('bag-one', {
-      moves: function (el, container, handle) {
-        return handle.className.indexOf('handle') >= 0 ;
-      }
-    });
-    dragulaService.drag.subscribe((value) => {
-      this.onDrag(value.slice(1));
-    });
-    dragulaService.drop.subscribe((value) => {
-      this.onDrop(value.slice(1));
-    });
-    dragulaService.over.subscribe((value) => {
-      this.onOver(value.slice(1));
-    });
-    dragulaService.out.subscribe((value) => {
-      this.onOut(value.slice(1));
-    });
   }
 
   private hasClass(el: any, name: string) {
@@ -87,6 +71,23 @@ export class ListAnswerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dragulaService.setOptions('bag-' + this.idQues, {
+      moves: function (el, container, handle) {
+        return handle.className.indexOf('handle') >= 0;
+      }
+    });
+    this.dragulaService.drag.subscribe((value) => {
+      this.onDrag(value.slice(1));
+    });
+    this.dragulaService.drop.subscribe((value) => {
+      this.onDrop(value.slice(1));
+    });
+    this.dragulaService.over.subscribe((value) => {
+      this.onOver(value.slice(1));
+    });
+    this.dragulaService.out.subscribe((value) => {
+      this.onOut(value.slice(1));
+    });
   }
 
   chooseAnswer(answer) {

@@ -1,1 +1,5 @@
-<app-question-card></app-question-card>
+<div [dragula]='"bag"' [dragulaModel]='listQuestion'>
+    <div class="contain-question" [ngClass]="{'acitve-test': currentQues === question}" (click)="chooseQuestion(question)" *ngFor="let question of listQuestion">
+        <app-question-card [idQues]="question"></app-question-card>
+    </div>
+</div>

@@ -7,8 +7,8 @@ import { Component, Input, OnInit, ViewChildren, Output, EventEmitter } from '@a
 })
 export class AnswerFormComponent implements OnInit {
   @ViewChildren('input') input;
-  @Input() answer: Number;
-  currentAnswer: Number;
+  @Input() answer: any;
+  currentAnswer: any;
   @Input()
   set cAnswer(currentAnswer) {
     this.currentAnswer = currentAnswer;

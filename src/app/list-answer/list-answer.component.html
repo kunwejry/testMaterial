@@ -1,4 +1,4 @@
-<div [dragula]='"bag-one"' [dragulaModel]='listAnswer' [dragulaOptions]="options">
+<div [dragula]="'bag-' + idQues" [dragulaModel]='listAnswer'>
     <app-answer-form *ngFor="let answer of listAnswer" [answer]="answer" [cAnswer]="currentAnswer" (remove)="removeAnswer($event)" (click)="chooseAnswer(answer)"></app-answer-form>
 </div>
 <div class="add-option" (click)="addOption()">

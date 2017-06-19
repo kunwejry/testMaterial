@@ -1,11 +1,11 @@
 <div class="answer-wrap" [ngClass]="{'active': answer === currentAnswer}">
-  <md-icon class="icon out-left hide">more_vert</md-icon>
-  <md-icon class="icon left">panorama_fish_eye</md-icon>
-  <div class="input-middle">
-    <md-input-container [floatPlaceholder]="'never'" class="full-width">
-      <input #input [id]="answer" mdInput [value]="'Option ' + answer.value">
-    </md-input-container>
-  </div>
-  <md-icon class="icon in-right hide">perm_media</md-icon>
-  <md-icon class="icon right" (click)="removeItem(answer)">clear</md-icon>
+    <md-icon class="icon out-left hide handle">more_vert</md-icon>
+    <md-icon class="icon left">panorama_fish_eye</md-icon>
+    <div class="input-middle">
+        <md-input-container [floatPlaceholder]="'never'" class="full-width">
+            <input #input [id]="answer" mdInput [value]="'Option ' + answer.value">
+        </md-input-container>
+    </div>
+    <md-icon class="icon in-right hide">perm_media</md-icon>
+    <md-icon class="icon right" (click)="removeItem(answer)">clear</md-icon>
 </div>

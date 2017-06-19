@@ -11,6 +11,7 @@ import { QuestionCardComponent } from './question-card/question-card.component';
 import { FormInputComponent } from './form-input/form-input.component';
 import { AnswerFormComponent } from './answer-form/answer-form.component';
 import { ListAnswerComponent } from './list-answer/list-answer.component';
+import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ListAnswerComponent } from './list-answer/list-answer.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    DragulaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

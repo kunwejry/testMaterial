@@ -20,15 +20,22 @@
     opacity: 0;
 }
 
-.answer-wrap >>> md-input-container .mat-input-underline {
+.answer-wrap>>>md-input-container .mat-input-underline {
     opacity: 0;
 }
 
-.answer-wrap:hover md-input-container >>> .mat-input-underline, .answer-wrap:hover md-icon.hide{
+.answer-wrap:hover md-input-container>>>.mat-input-underline,
+.answer-wrap:hover md-icon.hide {
     opacity: 1;
 }
 
-.answer-wrap.active md-input-container >>> .mat-input-underline, .answer-wrap.active md-icon.hide {
+.answer-wrap.active md-input-container>>>.mat-input-underline,
+.answer-wrap.active md-icon.hide {
+    opacity: 1;
+}
+
+.gu-mirror md-input-container .mat-input-underline,
+.gu-mirror md-icon.hide {
     opacity: 1;
 }
 
@@ -47,4 +54,3 @@
 .icon.in-right {
     right: 40px;
 }
-
